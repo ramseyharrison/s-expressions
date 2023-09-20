@@ -6,7 +6,7 @@ int main(){
   //example usage type pair : (define x 1)
   //this is represented internally as follows:
   //pair("define", pair("x"), pair("1",NULL))
-  //access to items in a pair is done through calls to car and cdr
+  //car and cdr work as expected on pairs
   exp* example1 = parse("(define x 1)");
   exp* car_example1 = example1 -> car();
   exp* cdr_example1 = example1 -> cdr();
