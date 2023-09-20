@@ -38,6 +38,8 @@ pair* parse_list(std::string str, int loc){
 }
 
 exp* parse_atom(std::string str){
+  //for now, all atoms are stored as strings
+  //type differentiation is a next step
   int loc = 0;
   return new sstring(next_token(str,loc));
 }
