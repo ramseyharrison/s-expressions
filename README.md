@@ -1,6 +1,6 @@
 # s expressions in C++
 
-Type system for s expressions in C++, including a very basic parser to go from text representation to the object representation.
+Type system for s expressions in C++, including a very basic parser to go from the text representation to the object representation.
 
 Example usage is exemplified in main.cpp
 
