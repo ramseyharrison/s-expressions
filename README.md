@@ -2,7 +2,7 @@
 
 Type system for s expressions in C++, including a very basic parser to go from the text representation to the object representation.
 
-Example usage is exemplified in main.cpp
+Example usage can be found in ```main.cpp```
 
 To parse an s-expression call exp* parse() from parsing.hpp.
 An expression parsed can either be an atom or pair, both of which are represented as subclass of exp called atom and pair. As of now everything which is an atom is stored as a string, using a subclass of atom called sstring.
