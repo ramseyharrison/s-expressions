@@ -1,6 +1,6 @@
 # scheme s expressions in C++
 
-parser and object representation for s expressions representing scheme syntax.
+parser and object representation for s expressions corresponding to scheme syntax.
 
 As of now there are three types of atoms :
 1. integers
