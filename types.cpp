@@ -7,13 +7,11 @@ exp::exp() {};
 void exp::print(){
   std::cout << to_string() << std::endl;
 }
-/** end exp **/
 
 /** atom **/
 atom::atom() {};
 exp* atom::car(){return this;}
 exp* atom::cdr(){return this;}
-/** end atom **/
 
 /** sint **/
 
@@ -26,7 +24,20 @@ int sint::get_value(){return value;}
 //to_string
 std::string sint::to_string(){return std::to_string(get_value());}
 
-/** end sint **/
+/** sboolean **/
+//constructor
+sboolean::sboolean(char c){
+    value = (c == 't') ? true : false;
+}
+
+//getter
+bool sboolean::get_value(){return value;}
+
+//to_string
+
+std::string sboolean::to_string(){
+  return (value) ? "#t" :  "#f";
+}
 
 /** sstring **/
 
@@ -39,7 +50,9 @@ std::string sstring::get_value(){ return value;}
 //to_string
 std::string sstring::to_string(){ return get_value();}
 
-/** end sstring **/
+
+/** sidentifier **/
+sidentifier::sidentifier(std::string stringval) : sstring(stringval){}
 
 /** pair **/
 
@@ -60,4 +73,3 @@ std::string pair::to_string(){
   return get_car() -> to_string() + (get_cdr() ? " " + get_cdr() -> to_string() : "");
 }
 
-/** end pair **/
